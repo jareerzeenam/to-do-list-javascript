@@ -51,4 +51,21 @@ form button:hover {
   background: #f5896b;
   color: #fff;
 }
+
+@media screen and (max-width: 600px) {
+  header {
+    font-size: 1rem;
+  }
+  form {
+    min-height: 5vh;
+  }
+  form input {
+    width: 70%;
+  }
+  form input,
+  form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */

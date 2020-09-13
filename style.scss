@@ -50,3 +50,24 @@ form {
         }
     }
 }
+
+// ! Mobile
+@media screen and (max-width: 600px) {
+    header {
+        font-size: 1rem;
+    }
+
+    form {
+        min-height: 5vh;
+        input {
+            width: 70%;
+        }
+
+        input,
+        button {
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+    }
+
+}
