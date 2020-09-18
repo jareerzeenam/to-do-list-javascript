@@ -51,6 +51,105 @@ form {
     }
 }
 
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .todo-list {
+        min-width: 30%;
+        list-style: none;
+
+        .todo {
+            margin: 0.5rem;
+            background: white;
+            color: black;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.5s ease;
+
+            li {
+                flex: 1;
+            }
+
+            .todo-item {
+                padding: 0rem 0.5rem;
+            }
+
+            .complete-btn,
+            .trash-btn {
+                background: #ff6f47;
+                color: white;
+                border: none;
+                outline: 0;
+                padding: 1rem;
+                cursor: pointer;
+                font-size: 1rem;
+
+            }
+
+            .complete-btn {
+                background: rgb(55, 211, 55);
+            }
+        }
+
+        // !JS start
+        .fa-check,
+        .fa-trash {
+            pointer-events: none;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        .fall {
+            transform: translateY(8rem) rotateZ(20deg);
+            opacity: 0;
+        }
+        
+    }
+
+    
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content: "\25BC";
+        position: absolute;
+        background: #ff6f47;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        pointer-events: none;
+        transition: all 0.3s ease;
+
+    }
+    &:hover::after{
+        background: white;
+        color: #ff6f47;
+    }
+}
+
+
 // ! Mobile
 @media screen and (max-width: 600px) {
     header {
@@ -59,6 +158,7 @@ form {
 
     form {
         min-height: 5vh;
+
         input {
             width: 70%;
         }
